@@ -11,19 +11,17 @@ public class CalcolaValutazione {
 		this.voti = voti;
 		}
 	
-	String calculate(){
+	boolean promosso(){
 		
-		String valutazione;
 		
 		if(assenze > 25 && assenze < 50 && voti > 2){
-			valutazione = "promosso";
+			return true;
 		}else if(assenze < 25 && voti >= 2) {
-			valutazione = "promosso";
+			return true;
 		}else {
-			valutazione = "bocciato";
+			return false;
 		}
-		
-		return valutazione;			
+				
 	}
 	
 }

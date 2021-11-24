@@ -31,7 +31,11 @@ public class Main {
 			rngAssenze = rng.nextInt(101);
 			rngVoti = somma / voti.length;
 			studenti[i] = new CalcolaValutazione(id, rngAssenze, rngVoti);
-			System.out.println("Valutazione studente id " + id + ": " + studenti[i].calculate());
+			if(studenti[i].promosso()) {
+				System.out.println("Valutazione studente id " + id + ": promosso");
+			}else if(!studenti[i].promosso()) {
+				System.out.println("Valutazione studente id " + id + ": bocciato");
+			}
 			i++;
 		}
 	}
