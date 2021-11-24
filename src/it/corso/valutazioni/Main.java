@@ -23,7 +23,7 @@ public class Main {
 		while(i < studenti.length){
 			float somma = 0;			
 			for (int j = 0; j < voti.length; j++) {
-				voti[j] = rng.nextInt(4) + 1;
+				voti[j] = rng.nextInt(5) + 1;
 				somma = somma + voti[j];
 			}
 			
